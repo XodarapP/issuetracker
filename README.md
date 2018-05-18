@@ -2,7 +2,7 @@ Issue Tracker
 ==============================================
 ## Prerequisites
 You need the following tools to build the project:
-  * JDK 8 (**not 9**): http://www.oracle.com/technetwork/java/javase/downloads/index.html
+  * JDK 8 (**not 10**): http://www.oracle.com/technetwork/java/javase/downloads/index.html
   * Maven (3.5+ recommended): https://maven.apache.org/download.cgi
   
 When everything is installed and `PATH` is configured, run `mvn -version` to make sure that it is using JDK 8.
