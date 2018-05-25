@@ -14,4 +14,6 @@ public interface IssueResolverService {
     void deleteIssue(long id);
 
     IssueResolver getIssueResolverById(long id);
+
+    List<IssueResolver> findAllById(long id);
 }

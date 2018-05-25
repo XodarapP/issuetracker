@@ -3,10 +3,8 @@ package com.axmor.model;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.hibernate.annotations.Proxy;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Date;
 
 @Entity
@@ -14,14 +12,9 @@ import java.util.Date;
 @Setter
 @ToString
 @Table(name = "IssueResolver")
-@Proxy(lazy = false)
-public class IssueResolver implements Serializable {
+public class IssueResolver extends BaseEntity {
 
-    private static final long serialVersionUID = 3332305606506460573L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private static final long serialVersionUID = -7908494540095361292L;
 
     @Column(name = "IssueId", nullable = false)
     private long issueId;

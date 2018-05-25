@@ -14,4 +14,5 @@ public interface IssueService {
     void deleteIssue(long id);
 
     Issue getIssueById(long id);
+
 }

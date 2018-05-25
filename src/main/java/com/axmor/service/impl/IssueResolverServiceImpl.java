@@ -31,11 +31,16 @@ public class IssueResolverServiceImpl implements IssueResolverService {
 
     @Override
     public void deleteIssue(long id) {
-        issueResolverRepository.deleteById(id);
+        issueResolverRepository.delete(id);
     }
 
     @Override
     public IssueResolver getIssueResolverById(long id) {
-        return issueResolverRepository.getOne(id);
+        return issueResolverRepository.findOne(id);
+    }
+
+    @Override
+    public List<IssueResolver> findAllById(long id) {
+        return issueResolverRepository.issueResolverCustomSelect(id);
     }
 }
