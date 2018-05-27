@@ -22,7 +22,7 @@ public class Issue extends BaseEntity {
     @Column(name = "Author", nullable = false, length = 256)
     private String author;
 
-    @Column(name = "IssueDescription", nullable = false, length = 256)
+    @Column(name = "IssueDescription", nullable = false, length = 1000)
     private String issueDescription;
 
     @Column(name = "DateCreated", nullable = false)
