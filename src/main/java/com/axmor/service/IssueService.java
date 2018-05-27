@@ -15,4 +15,6 @@ public interface IssueService {
 
     Issue getIssueById(long id);
 
+    int updateIssueStatus(long issueId, String status);
+
 }

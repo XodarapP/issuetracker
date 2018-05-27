@@ -188,6 +188,7 @@ public class IssueTrackerController {
             issueResolver.setCommentDate(new Date());
 
             issueResolverService.addIssue(issueResolver);
+            issueService.updateIssueStatus(Long.parseLong(issueId), status);
             res.redirect("/issue/" + issueId, 301);
             return "";
         });

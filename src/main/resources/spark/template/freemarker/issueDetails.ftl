@@ -96,6 +96,7 @@
             </table>
             <br><br>
             <hr>
+        <#if issues.status != "Closed">
             <h3>Create new solution</h3>
             <form action="/issue/${issues.id}" method="POST">
                 <h4>Status:</h4>
@@ -106,15 +107,16 @@
                 </select>
                 <br>
                 <h4>Author:</h4>
-            <#if user??>
-            ${user}
-            </#if>
+                <#if user??>
+                ${user}
+                </#if>
                 <br>
                 <h4>Text:</h4>
                 <textarea name="issue_description" id="issue_description"cols="50" rows="15" required></textarea>
                 <br><br>
                 <button type="btn btn-action" class="btn btn-warning" href="/issue/${issues.id}" formmethod="post">Create</button>
             </form>
+        </#if>
             <hr>
         </article>
     </div>

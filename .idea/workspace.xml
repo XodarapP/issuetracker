@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="921a3362-b352-4a19-9f3c-3df2f2faf83f" name="Default" comment="Update project:&#10;- add user entity and user authentication&#10;- removed unused dependencies&#10;- add .ftl pages">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/images/logo.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axmor/controller/IssueTrackerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/axmor/controller/IssueTrackerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/createIssue.ftl" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/createIssue.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/index.ftl" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/index.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axmor/repository/IssueRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/axmor/repository/IssueRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axmor/service/IssueService.java" afterPath="$PROJECT_DIR$/src/main/java/com/axmor/service/IssueService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/axmor/service/impl/IssueServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/axmor/service/impl/IssueServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/issueDetails.ftl" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/issueDetails.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/issues.ftl" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/issues.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/notFound.ftl" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/notFound.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/signin.ftl" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/signin.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/signup.ftl" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/signup.ftl" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +33,8 @@
       <file leaf-file-name="IssueTrackerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/axmor/controller/IssueTrackerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="47" column="89" lean-forward="false" selection-start-line="47" selection-start-column="89" selection-end-line="47" selection-end-column="89" />
+            <state relative-caret-position="306">
+              <caret line="190" column="74" lean-forward="false" selection-start-line="190" selection-start-column="74" selection-end-line="190" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,23 +82,23 @@
         <option value="$PROJECT_DIR$/src/main/java/com/axmor/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/axmor/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/axmor/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/axmor/service/IssueResolverService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/axmor/service/impl/IssueResolverServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/axmor/model/IssueResolver.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/axmor/model/Issue.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/axmor/model/BaseEntity.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/axmor/repository/IssueRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/axmor/service/impl/IssueServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/axmor/service/IssueService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/createIssue.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/index.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/issueDetails.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/issues.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/notFound.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/signin.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/signup.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/issueDetails.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/axmor/repository/IssueRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/axmor/service/IssueResolverService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/axmor/service/IssueService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/axmor/service/impl/IssueServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/axmor/controller/IssueTrackerController.java" />
       </list>
     </option>
@@ -144,9 +140,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,6 +191,37 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="axmor" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="issuetracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IssueTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="axmor" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="issuetracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IssueTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="axmor" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="issuetracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IssueTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="axmor" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="issuetracker" type="b2602c69:ProjectViewProjectNode" />
@@ -262,6 +286,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -414,7 +441,8 @@
       <workItem from="1527185622807" duration="1956000" />
       <workItem from="1527187679517" duration="3841000" />
       <workItem from="1527216444956" duration="1195000" />
-      <workItem from="1527426628582" duration="641000" />
+      <workItem from="1527426628582" duration="899000" />
+      <workItem from="1527437877216" duration="510000" />
     </task>
     <task id="LOCAL-00001" summary="Update project:&#10;- add user entity and user authentication&#10;- removed unused dependencies&#10;- add .ftl pages">
       <created>1527216744461</created>
@@ -427,11 +455,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12717000" />
+    <option name="totallyTimeSpent" value="13485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -441,21 +468,21 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3523654" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3523654" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24632953" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2685325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27231467" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16490166" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39967373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -517,6 +544,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/axmor/controller/IssueTrackerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1918">
@@ -640,13 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/axmor/service/IssueResolverService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/axmor/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
@@ -752,27 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/axmor/repository/IssueRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="3" column="61" lean-forward="false" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/axmor/service/impl/IssueServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/axmor/service/IssueService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -849,46 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/issueDetails.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="122" column="7" lean-forward="false" selection-start-line="122" selection-start-column="7" selection-end-line="122" selection-end-column="7" />
-          <folding>
-            <marker date="1527426697353" expanded="true" signature="31:4262" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="38:526" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="532:4254" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="594:1118" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="623:1111" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="659:754" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="801:1100" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="852:1085" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="962:984" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="1191:4246" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="1220:1405" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="1428:4239" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="1477:4228" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="1518:1598" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="1613:2450" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="1685:2168" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="1706:1836" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="1857:1996" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="2017:2147" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="2188:2418" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="2209:2286" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="2307:2397" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="2544:3303" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="2568:2850" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="2589:2825" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="2874:3282" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="2898:3257" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="2966:3232" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="3444:4192" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="3568:3732" ph="..." />
-            <marker date="1527426697353" expanded="true" signature="3804:3850" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/issues.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -944,31 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
           <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding>
-            <marker date="1527426773471" expanded="true" signature="31:3020" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="38:512" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="519:3012" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="581:1032" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="610:1025" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="646:738" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="785:1014" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="836:999" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="874:896" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="1103:2997" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="1131:1223" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="1245:2975" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="1293:2969" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="1334:1408" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="1484:2964" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="1534:2945" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="1579:2679" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="1823:2673" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="1876:2107" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="2160:2395" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="2490:2652" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="2754:2922" ph="..." />
-            <marker date="1527426773471" expanded="true" signature="2815:2899" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1034,10 +978,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/issueDetails.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1498">
+          <caret line="107" column="20" lean-forward="true" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
+          <folding>
+            <marker date="1527437988596" expanded="true" signature="31:4329" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="38:526" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="532:4321" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="594:1118" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="623:1111" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="659:754" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="801:1100" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="852:1085" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="962:984" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="1191:4313" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="1220:1405" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="1428:4306" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="1477:4295" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="1518:1598" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="1613:2450" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="1685:2168" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="1706:1836" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="1857:1996" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="2017:2147" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="2188:2418" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="2209:2286" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="2307:2397" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="2544:3303" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="2568:2850" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="2589:2825" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="2874:3282" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="2898:3257" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="2966:3232" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="3355:4259" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="3484:4244" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="3608:3772" ph="..." />
+            <marker date="1527437988596" expanded="true" signature="3848:3902" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/axmor/repository/IssueRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <marker date="1527437988141" expanded="true" signature="38:290" ph="..." />
+            <marker date="1527437988141" expanded="true" signature="366:450" ph="@{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/axmor/service/IssueResolverService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <folding>
+            <marker date="1527186654658" expanded="false" signature="35:89" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/axmor/service/IssueService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+          <folding>
+            <marker date="1527438175369" expanded="false" signature="35:81" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/axmor/service/impl/IssueServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <marker date="1527438175854" expanded="false" signature="40:320" ph="..." />
+            <marker date="1527438175854" expanded="false" signature="511:522" ph=" { " />
+            <marker date="1527438175854" expanded="false" signature="550:556" ph=" }" />
+            <marker date="1527438175854" expanded="false" signature="609:620" ph=" { " />
+            <marker date="1527438175854" expanded="false" signature="643:649" ph=" }" />
+            <marker date="1527438175854" expanded="false" signature="705:716" ph=" { " />
+            <marker date="1527438175854" expanded="false" signature="739:745" ph=" }" />
+            <marker date="1527438175854" expanded="false" signature="797:808" ph=" { " />
+            <marker date="1527438175854" expanded="false" signature="830:836" ph=" }" />
+            <marker date="1527438175854" expanded="false" signature="890:901" ph=" { " />
+            <marker date="1527438175854" expanded="false" signature="931:937" ph=" }" />
+            <marker date="1527438175854" expanded="true" signature="943:971" ph="@{...}" />
+            <marker date="1527438175854" expanded="true" signature="1033:1044" ph=" { " />
+            <marker date="1527438175854" expanded="true" signature="1097:1103" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/axmor/controller/IssueTrackerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="47" column="89" lean-forward="false" selection-start-line="47" selection-start-column="89" selection-end-line="47" selection-end-column="89" />
+        <state relative-caret-position="306">
+          <caret line="190" column="74" lean-forward="false" selection-start-line="190" selection-start-column="74" selection-end-line="190" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

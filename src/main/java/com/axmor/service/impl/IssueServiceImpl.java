@@ -6,6 +6,7 @@ import com.axmor.service.IssueService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service("issueService")
@@ -37,6 +38,12 @@ public class IssueServiceImpl implements IssueService {
     @Override
     public Issue getIssueById(long id) {
         return repository.findOne(id);
+    }
+
+    @Override
+    @Transactional
+    public int updateIssueStatus(long issueId, String status) {
+        return repository.updateIssueStatus(issueId, status);
     }
 
 }
