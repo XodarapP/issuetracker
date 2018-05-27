@@ -14,11 +14,11 @@
 <div class="navbar navbar-inverse navbar-fixed-top headroom" >
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="/"><img src="../images/logo.png"></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav pull-right">
-                <li><a href="/">Home</a></li>
+                <li><a href="#">You sign in as: <b>${user}</b></a></li>
                 <li class="dropdown">
                 </li>
                 <li class="active"><a class="btn" href="/logout">SIGN OUT</a></li>
@@ -70,7 +70,7 @@
                     <td width="500">${issues.issueDescription}</td>
                 </tr>
             </table>
-        <hr>
+            <hr>
         </#if>
             <br>
             <b>History:</b>
@@ -107,7 +107,7 @@
                 <br>
                 <h4>Author:</h4>
             <#if user??>
-            ${user.username}
+            ${user}
             </#if>
                 <br>
                 <h4>Text:</h4>

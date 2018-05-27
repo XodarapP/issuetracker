@@ -15,11 +15,11 @@
 <div class="navbar navbar-inverse navbar-fixed-top headroom" >
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="/"><img src="images/logo.png"></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav pull-right">
-                <li><a href="/">Home</a></li>
+                <li><a href="#">You sign in as: <b>${user}</b></a></li>
                 <li class="dropdown">
                 </li>
                 <li class="active"><a class="btn" href="/logout">SIGN OUT</a></li>
@@ -41,7 +41,7 @@
             </header>
             <form action="/createIssue" method="POST">
                 Name: <input class="form-control" id="issue_name" name="issue_name" type="text" size="42" required/><br>
-                Author: <#if user??>${user.username}</#if> <hr>
+                Author: ${user}<hr>
                 Description: <br>
                 <textarea name="description" id="description"cols="50" rows="15" required></textarea>
                 <hr>

@@ -33,23 +33,21 @@ public class IssueTrackerController {
         setupRotes();
     }
 
-    private void setupRotes(){
-
+    private void setupRotes() {
         /*
 		 * Index page
 		 */
         get("/", (req, res) -> {
-            String info = "";
             User user = getAuthenticatedUser(req);
             Map<String, Object> map = new HashMap<>();
             if (user == null){
-                info = "INFO: You must register, or sign in to view issue tracker";
+                map.put("info", "You must register, or sign in to view issue tracker");
+                map.put("register","REGISTER");
             }
             else {
-                info = "INFO: You are already registered and entered as ";
+                map.put("info", "You are registered and logg in as " + user.getUsername());
+                map.put("user", user.getUsername());
             }
-            map.put("info", info);
-            map.put("user", user);
             return new ModelAndView(map, "index.ftl");
         }, new FreeMarkerEngine());
 
@@ -143,7 +141,7 @@ public class IssueTrackerController {
             List<Issue> issues = issueService.getAllIssues();
             User user = getAuthenticatedUser(req);
             Map<String, Object> input = new HashMap<>();
-            input.put("user", user);
+            input.put("user", user.getUsername());
             input.put("issues", issues);
             return new ModelAndView(input, "issues.ftl");
         }, new FreeMarkerEngine());
@@ -164,7 +162,7 @@ public class IssueTrackerController {
                 halt();
             }
             input.put("issues", issue);
-            input.put("user", user);
+            input.put("user", user.getUsername());
             input.put("issueResolvers", issueResolvers);
             return new ModelAndView(input, "issueDetails.ftl");
         }, new FreeMarkerEngine());
@@ -199,7 +197,7 @@ public class IssueTrackerController {
         get("/createIssue", (req, res) -> {
             User user = getAuthenticatedUser(req);
             Map<String, Object> input = new HashMap<>();
-            input.put("user", user);
+            input.put("user", user.getUsername());
             return new ModelAndView(input, "createIssue.ftl");
         }, new FreeMarkerEngine());
 
@@ -265,6 +263,5 @@ public class IssueTrackerController {
     private User getAuthenticatedUser(Request request) {
         return request.session().attribute(USER_SESSION_ID);
     }
-
 }
 
