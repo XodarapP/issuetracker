@@ -35,7 +35,7 @@ public class IssueTrackerController {
     }
 
     private void setupRotes() {
-        /**
+        /*
          * Index page
          */
         get("/", (req, res) -> {
@@ -51,7 +51,7 @@ public class IssueTrackerController {
             return new ModelAndView(map, "index.ftl");
         }, new FreeMarkerEngine());
 
-        /**
+        /*
          * Page for registering a new user
          */
         get("/register", (req, res) -> {
@@ -67,7 +67,7 @@ public class IssueTrackerController {
             }
         });
 
-        /**
+        /*
          * Registration for new user
          */
         post("/register", (req, res) -> {
@@ -94,7 +94,7 @@ public class IssueTrackerController {
             return new ModelAndView(map, "signup.ftl");
         }, new FreeMarkerEngine());
 
-        /**
+        /*
          * Sign in for user
          */
         get("/signin", (req, res) -> {
@@ -102,7 +102,7 @@ public class IssueTrackerController {
             return new ModelAndView(map, "signin.ftl");
         }, new FreeMarkerEngine());
 
-        /**
+        /*
          * Sign in for user and check user data
          */
         post("/signin", (req, res) -> {
@@ -134,7 +134,7 @@ public class IssueTrackerController {
             }
         });
 
-        /**
+        /*
          * Displays all issues
          */
         get("/issues", (req, res) -> {
@@ -148,7 +148,7 @@ public class IssueTrackerController {
 
         checkUserAuthentication("/issues");
 
-        /**
+        /*
          * Detail information about issue
          */
         get("/issue/:id", (req, res) -> {
@@ -169,7 +169,7 @@ public class IssueTrackerController {
 
         checkUserAuthentication("/issue/:id");
 
-        /**
+        /*
          * Create comment for issue
          */
         post("/issue/:id", (req, res) -> {
@@ -193,7 +193,7 @@ public class IssueTrackerController {
             return "";
         });
 
-        /**
+        /*
          * Page with form for creating new issue
          */
         get("/createIssue", (req, res) -> {
@@ -205,7 +205,7 @@ public class IssueTrackerController {
 
         checkUserAuthentication("/createIssue");
 
-        /**
+        /*
          * Create new issue
          */
         post("/createIssue", (req, res) -> {
@@ -227,7 +227,7 @@ public class IssueTrackerController {
             return "";
         });
 
-        /**
+        /*
          * Logout for user
          */
         get("/logout", (req, res) -> {

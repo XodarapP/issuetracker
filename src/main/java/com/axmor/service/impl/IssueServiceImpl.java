@@ -3,6 +3,7 @@ package com.axmor.service.impl;
 import com.axmor.model.Issue;
 import com.axmor.repository.IssueRepository;
 import com.axmor.service.IssueService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,9 +11,8 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Service("issueService")
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class IssueServiceImpl implements IssueService {
-
-    @Autowired
     private IssueRepository repository;
 
     @Override
@@ -26,24 +26,13 @@ public class IssueServiceImpl implements IssueService {
     }
 
     @Override
-    public void updateIssue(Issue issue) {
-        repository.save(issue);
-    }
-
-    @Override
-    public void deleteIssue(long id) {
-        repository.delete(id);
-    }
-
-    @Override
     public Issue getIssueById(long id) {
         return repository.findOne(id);
     }
 
     @Override
     @Transactional
-    public int updateIssueStatus(long issueId, String status) {
-        return repository.updateIssueStatus(issueId, status);
+    public void updateIssueStatus(long issueId, String status) {
+        repository.updateIssueStatus(issueId, status);
     }
-
 }

@@ -9,12 +9,7 @@ public interface IssueService {
 
     void addIssue(Issue issue);
 
-    void updateIssue(Issue issue);
-
-    void deleteIssue(long id);
-
     Issue getIssueById(long id);
 
-    int updateIssueStatus(long issueId, String status);
-
+    void updateIssueStatus(long issueId, String status);
 }

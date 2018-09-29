@@ -3,7 +3,6 @@ package com.axmor.model;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -12,10 +11,8 @@ import java.util.Date;
 @Getter
 @Setter
 @ToString
-@Slf4j
 @Table(name = "IssueResolver")
 public class IssueResolver extends BaseEntity {
-
     private static final long serialVersionUID = -7908494540095361292L;
 
     @Column(name = "IssueId", nullable = false)

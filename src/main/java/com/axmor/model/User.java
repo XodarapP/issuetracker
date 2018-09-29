@@ -14,9 +14,7 @@ import javax.persistence.Table;
 @Setter
 @ToString
 @Table(name = "Users")
-
 public class User extends BaseEntity {
-
     private static final long serialVersionUID = 6352503253954445201L;
 
     @Column(name = "Username", length = 50, nullable = false)
