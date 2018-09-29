@@ -6,6 +6,7 @@ import com.axmor.model.User;
 import com.axmor.service.IssueResolverService;
 import com.axmor.service.IssueService;
 import com.axmor.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 import spark.ModelAndView;
 import spark.Request;
@@ -17,8 +18,8 @@ import java.util.List;
 import java.util.Map;
 
 import static spark.Spark.*;
-import static spark.Spark.halt;
 
+@Slf4j
 public class IssueTrackerController {
     private static final String USER_SESSION_ID = "user";
 
@@ -34,26 +35,25 @@ public class IssueTrackerController {
     }
 
     private void setupRotes() {
-        /*
-		 * Index page
-		 */
+        /**
+         * Index page
+         */
         get("/", (req, res) -> {
             User user = getAuthenticatedUser(req);
             Map<String, Object> map = new HashMap<>();
-            if (user == null){
+            if (user == null) {
                 map.put("info", "You must register, or sign in to view issue tracker");
-                map.put("register","REGISTER");
-            }
-            else {
+                map.put("register", "REGISTER");
+            } else {
                 map.put("info", "You are registered and logg in as " + user.getUsername());
                 map.put("user", user.getUsername());
             }
             return new ModelAndView(map, "index.ftl");
         }, new FreeMarkerEngine());
 
-        /*
-		 * Page for registering a new user
-		 */
+        /**
+         * Page for registering a new user
+         */
         get("/register", (req, res) -> {
             Map<String, Object> map = new HashMap<>();
             return new ModelAndView(map, "signup.ftl");
@@ -61,15 +61,15 @@ public class IssueTrackerController {
 
         before("/register", (req, res) -> {
             User authUser = getAuthenticatedUser(req);
-            if(authUser != null) {
+            if (authUser != null) {
                 res.redirect("/");
                 halt();
             }
         });
 
-        /*
-		 * Registration for new user
-		 */
+        /**
+         * Registration for new user
+         */
         post("/register", (req, res) -> {
             Map<String, Object> map = new HashMap<>();
             User user = new User();
@@ -79,9 +79,9 @@ public class IssueTrackerController {
             user.setRole("User");
             String error = user.validate();
 
-            if(StringUtils.isEmpty(error)) {
+            if (StringUtils.isEmpty(error)) {
                 User existingUser = userService.getUserByName(user.getUsername());
-                if(existingUser == null) {
+                if (existingUser == null) {
                     userService.addUser(user);
                     res.redirect("/signin");
                     halt();
@@ -94,17 +94,17 @@ public class IssueTrackerController {
             return new ModelAndView(map, "signup.ftl");
         }, new FreeMarkerEngine());
 
-        /*
-		 * Sign in for user
-		 */
+        /**
+         * Sign in for user
+         */
         get("/signin", (req, res) -> {
             Map<String, Object> map = new HashMap<>();
             return new ModelAndView(map, "signin.ftl");
         }, new FreeMarkerEngine());
 
-        /*
-		 * Sign in for user and check user data
-		 */
+        /**
+         * Sign in for user and check user data
+         */
         post("/signin", (req, res) -> {
             Map<String, Object> map = new HashMap<>();
             User user = new User();
@@ -112,10 +112,10 @@ public class IssueTrackerController {
             user.setPassword(req.queryParams("password"));
             String error = "";
             User signUpUser = userService.getUserByName(user.getUsername());
-            if(signUpUser == null) {
-                error = "Invalid username";
-            } else if(!userService.checkPasswords(user.getPassword(), signUpUser.getPassword())) {
-                error = "Invalid password";
+            if (signUpUser == null) {
+                error = "Invalid username/password";
+            } else if (!userService.checkPasswords(user.getPassword(), signUpUser.getPassword())) {
+                error = "Invalid username/password";
             } else {
                 addAuthenticatedUser(req, signUpUser);
                 res.redirect("/issues");
@@ -128,15 +128,15 @@ public class IssueTrackerController {
 
         before("/signin", (req, res) -> {
             User authUser = getAuthenticatedUser(req);
-            if(authUser != null) {
+            if (authUser != null) {
                 res.redirect("/");
                 halt();
             }
         });
 
-        /*
-		 * Displays all issues
-		 */
+        /**
+         * Displays all issues
+         */
         get("/issues", (req, res) -> {
             List<Issue> issues = issueService.getAllIssues();
             User user = getAuthenticatedUser(req);
@@ -148,9 +148,9 @@ public class IssueTrackerController {
 
         checkUserAuthentication("/issues");
 
-        /*
-		 * Detail information about issue
-		 */
+        /**
+         * Detail information about issue
+         */
         get("/issue/:id", (req, res) -> {
             String id = req.params(":id");
             User user = getAuthenticatedUser(req);
@@ -169,9 +169,9 @@ public class IssueTrackerController {
 
         checkUserAuthentication("/issue/:id");
 
-        /*
-		 * Create comment for issue
-		 */
+        /**
+         * Create comment for issue
+         */
         post("/issue/:id", (req, res) -> {
             String issueId, comment, commentAuthor, status;
             User user = getAuthenticatedUser(req);
@@ -183,18 +183,19 @@ public class IssueTrackerController {
             IssueResolver issueResolver = new IssueResolver();
             issueResolver.setIssueId(Long.parseLong(issueId));
             issueResolver.setUpdateStatus(status);
-            issueResolver.setCommentAuthor(commentAuthor);
-            issueResolver.setComment(comment);
-            issueResolver.setCommentDate(new Date());
+            issueResolver.setDescriptionAuthor(commentAuthor);
+            issueResolver.setDescription(comment);
+            issueResolver.setDescriptionDate(new Date());
 
             issueResolverService.addIssue(issueResolver);
             issueService.updateIssueStatus(Long.parseLong(issueId), status);
             res.redirect("/issue/" + issueId, 301);
             return "";
         });
-        /*
-		 * Page with form for creating new issue
-		 */
+
+        /**
+         * Page with form for creating new issue
+         */
         get("/createIssue", (req, res) -> {
             User user = getAuthenticatedUser(req);
             Map<String, Object> input = new HashMap<>();
@@ -204,9 +205,9 @@ public class IssueTrackerController {
 
         checkUserAuthentication("/createIssue");
 
-          /*
-		 * Create new issue
-		 */
+        /**
+         * Create new issue
+         */
         post("/createIssue", (req, res) -> {
             User user = getAuthenticatedUser(req);
             String issueName, author, description;
@@ -226,9 +227,9 @@ public class IssueTrackerController {
             return "";
         });
 
-        /*
-		 * Logout for user
-		 */
+        /**
+         * Logout for user
+         */
         get("/logout", (req, res) -> {
             removeAuthenticatedUser(req);
             res.redirect("/");
@@ -241,24 +242,22 @@ public class IssueTrackerController {
         }, new FreeMarkerEngine());
     }
 
-    private void checkUserAuthentication(String path){
+    private void checkUserAuthentication(String path) {
         before(path, (req, res) -> {
             User user = getAuthenticatedUser(req);
-            if(user == null) {
+            if (user == null) {
                 res.redirect("/");
                 halt();
             }
         });
     }
 
-    private void addAuthenticatedUser(Request request, User u) {
-        request.session().attribute(USER_SESSION_ID, u);
-
+    private void addAuthenticatedUser(Request request, User user) {
+        request.session().attribute(USER_SESSION_ID, user);
     }
 
     private void removeAuthenticatedUser(Request request) {
         request.session().removeAttribute(USER_SESSION_ID);
-
     }
 
     private User getAuthenticatedUser(Request request) {

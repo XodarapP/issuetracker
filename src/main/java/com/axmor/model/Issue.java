@@ -11,7 +11,7 @@ import java.util.Date;
 @Getter
 @Setter
 @ToString
-@Table(name = "Issue")
+@Table(name = "Issues")
 public class Issue extends BaseEntity {
 
     private static final long serialVersionUID = 4577013807050898316L;

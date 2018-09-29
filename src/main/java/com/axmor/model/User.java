@@ -21,20 +21,22 @@ public class User extends BaseEntity {
 
     @Column(name = "Username", length = 50, nullable = false)
     private String username;
+
     @Column(name = "Password", length = 50, nullable = false)
     private String password;
 
     private String confirmPassword;
+
     @Column(name = "Role", length = 50, nullable = false)
     private String role;
 
     public String validate() {
         String error = null;
-        if(StringUtils.isEmpty(username)) {
+        if (StringUtils.isEmpty(username)) {
             error = "You have to enter a username";
-        } else if(StringUtils.isEmpty(password)) {
+        } else if (StringUtils.isEmpty(password)) {
             error = "You have to enter a password";
-        } else if(!password.equals(confirmPassword)) {
+        } else if (!password.equals(confirmPassword)) {
             error = "The two passwords do not match";
         }
         return error;

@@ -3,6 +3,7 @@ package com.axmor.model;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -11,6 +12,7 @@ import java.util.Date;
 @Getter
 @Setter
 @ToString
+@Slf4j
 @Table(name = "IssueResolver")
 public class IssueResolver extends BaseEntity {
 
@@ -19,15 +21,15 @@ public class IssueResolver extends BaseEntity {
     @Column(name = "IssueId", nullable = false)
     private long issueId;
 
-    @Column(name = "Comment", length = 1000)
-    private String comment;
+    @Column(name = "Description", length = 1000)
+    private String description;
 
-    @Column(name = "CommentAuthor", length = 256, nullable = false)
-    private String commentAuthor;
+    @Column(name = "DescriptionAuthor", length = 256, nullable = false)
+    private String descriptionAuthor;
 
-    @Column(name = "CommentDate")
+    @Column(name = "DescriptionDate")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date commentDate;
+    private Date descriptionDate;
 
     @Column(name = "UpdateStatus", length = 55, nullable = false)
     private String updateStatus;

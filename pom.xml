@@ -16,7 +16,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spark-core.version>2.7.1</spark-core.version>
         <junit.version>4.12</junit.version>
-        <logback-classic.version>1.2.3</logback-classic.version>
         <slf4j-api.version>1.7.25</slf4j-api.version>
         <hibernate.version>5.3.0.Final</hibernate.version>
         <hibernate-validator.version>6.0.10.Final</hibernate-validator.version>
@@ -28,7 +27,8 @@
         <h2.version>1.1.102</h2.version>
         <jackson-databind.version>2.8.7</jackson-databind.version>
         <commons-dbcp.version>1.4</commons-dbcp.version>
-        <lombok.version>1.16.18</lombok.version>
+        <lombok.version>1.3</lombok.version>
+        <javadoc-version>3.0.0</javadoc-version>
     </properties>
 
     <dependencies>
@@ -36,21 +36,6 @@
             <groupId>com.sparkjava</groupId>
             <artifactId>spark-core</artifactId>
             <version>${spark-core.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j-api.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>${logback-classic.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback-classic.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -97,9 +82,10 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
+            <version>1.18.2</version>
             <scope>provided</scope>
         </dependency>
+
         <!-- Spring Core -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -123,6 +109,16 @@
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
             <version>${commons-dbcp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>${javadoc-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.jtds</groupId>
+            <artifactId>jtds</artifactId>
+            <version>1.3.1</version>
         </dependency>
     </dependencies>
 

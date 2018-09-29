@@ -14,10 +14,9 @@ import java.io.Serializable;
 @Getter
 @Setter
 @ToString
-public class BaseEntity implements Serializable {
+class BaseEntity implements Serializable {
     private static final long serialVersionUID = 6401547610940322169L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
-
 }
